@@ -117,7 +117,7 @@ Then ask naturally:
 
 [`ponytail/`](ponytail/) tracks [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) at `9cc65d03aa2da1db7121b912d03596409ee340b8`, retaining its MIT license. Only the standalone main skill is included, unchanged.
 
-[`teamai/`](teamai/) tracks [Tencent/teamai-cli](https://github.com/Tencent/teamai-cli/tree/main/skills/teamai) at `128844fe6c4b2007f5bb4eb59988a13bb78f5f82`, preserving the upstream CLI entry and MIT license; the CLI serves the current workflow with `teamai skill get`. Invoke explicitly with `/teamai`.
+[`teamai/`](teamai/) tracks [Tencent/teamai-cli](https://github.com/Tencent/teamai-cli/tree/main/skills/teamai) at `046a1e63b1161147bf80ce51af0cba1c924c443d`, preserving the upstream CLI entry and MIT license; the CLI serves the current workflow with `teamai skill get`. Invoke explicitly with `/teamai`.
 
 TeamAI's share and wiki workflows (formerly the `teamai-share-learnings` and `team-wiki-codebase` companion skills, removed upstream in `ca6e51251f65`) are served by the TeamAI CLI: load them with `teamai skill get share` or `teamai skill get wiki`. TeamAI CLI is required for contribution and codebase commands.
 
