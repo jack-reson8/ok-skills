@@ -99,7 +99,7 @@ Claude Code または Codex のグローバル指示は [`CLAUDE_AGENTS.md`](CLA
 
 ## Vendored Skill Packs
 
-[`planning-with-files/`](planning-with-files/) は [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) を upstream baseline として対応しています。この repository では、その upstream directory を local skill の canonical baseline として扱います。ローカル差分は `skills-ref` 互換の `SKILL.md` frontmatter と、インストール場所に依存しない相対 script path docs に限定します。
+[`planning-with-files/`](planning-with-files/) は [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) を upstream baseline として対応しています。この repository では、その upstream directory を local skill の canonical baseline として扱います。ローカル差分は、インストール場所に依存しない相対 script path docs のみです。
 
 [`ponytail/`](ponytail/) は [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) の `9cc65d03aa2da1db7121b912d03596409ee340b8` を取り込み、MIT ライセンスを保持しています。独立したメインスキルのみを変更せずに収録しています。
 

@@ -99,7 +99,7 @@ Sau đó bạn có thể yêu cầu một cách tự nhiên:
 
 ## Gói skill vendored
 
-[`planning-with-files/`](planning-with-files/) dùng [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) làm upstream baseline. Repo này dùng thư mục upstream đó làm baseline canonical cho skill cục bộ. Khac biet cuc bo chi gom frontmatter `SKILL.md` tuong thich `skills-ref` va tai lieu dung duong dan script tuong doi khong phu thuoc vi tri cai dat.
+[`planning-with-files/`](planning-with-files/) dùng [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) làm upstream baseline. Repo này dùng thư mục upstream đó làm baseline canonical cho skill cục bộ. Khac biet cuc bo duy nhat la tai lieu dung duong dan script tuong doi khong phu thuoc vi tri cai dat.
 
 [`ponytail/`](ponytail/) lấy từ [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) tại `9cc65d03aa2da1db7121b912d03596409ee340b8`, giữ nguyên giấy phép MIT. Chỉ bao gồm skill chính độc lập, giữ nguyên không chỉnh sửa.
 

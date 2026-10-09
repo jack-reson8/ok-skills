@@ -99,7 +99,7 @@ Danach kannst du natürlich formulieren:
 
 ## Vendorte Skill-Pakete
 
-[`planning-with-files/`](planning-with-files/) verwendet [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) als Upstream-Basis. Dieses Repository nutzt dieses Upstream-Verzeichnis als kanonische Basis für den lokalen Skill. Lokale Unterschiede sind auf `skills-ref`-kompatibles `SKILL.md`-Frontmatter und install-location-unabhaengige relative Skriptpfade in der Dokumentation beschraenkt.
+[`planning-with-files/`](planning-with-files/) verwendet [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) als Upstream-Basis. Dieses Repository nutzt dieses Upstream-Verzeichnis als kanonische Basis für den lokalen Skill. Der einzige lokale Unterschied sind install-location-unabhaengige relative Skriptpfade in der Dokumentation.
 
 [`ponytail/`](ponytail/) stammt aus [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail), Stand `9cc65d03aa2da1db7121b912d03596409ee340b8`, unter Beibehaltung der MIT-Lizenz. Enthalten ist nur der eigenständige Hauptskill, unverändert.
 
