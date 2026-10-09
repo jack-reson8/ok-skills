@@ -115,7 +115,7 @@ Claude Code 或 Codex 的全局指令可以从 [`CLAUDE_AGENTS.md`](CLAUDE_AGENT
 
 [`planning-with-files/`](planning-with-files/) 对应的上游基线是 [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files)。本仓将该上游目录作为本地技能的规范基线；本地差异仅限兼容 `skills-ref` 的 `SKILL.md` frontmatter，以及不依赖安装位置的相对脚本路径说明。
 
-[`ponytail/`](ponytail/) 来自 [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) 的 `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156`，保留 MIT 许可证。以独立主技能形式收录，仅将 `argument-hint` 移至 metadata 以兼容技能格式。
+[`ponytail/`](ponytail/) 来自 [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) 的 `9cc65d03aa2da1db7121b912d03596409ee340b8`，保留 MIT 许可证。以独立主技能形式原样收录。
 
 [`teamai/`](teamai/) 来自 [Tencent/teamai-cli](https://github.com/Tencent/teamai-cli/tree/main/skills/teamai) 的 `128844fe6c4b2007f5bb4eb59988a13bb78f5f82`，保留上游 CLI 入口和 MIT 许可证；通过 `teamai skill get` 动态加载当前流程，并通过 `/teamai` 显式调用。
 

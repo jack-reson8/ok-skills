@@ -101,7 +101,7 @@ Despues puedes pedirlo de forma natural:
 
 [`planning-with-files/`](planning-with-files/) usa [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) como baseline upstream. Este repositorio usa ese directorio upstream como baseline canonica para la skill local. Las diferencias locales se limitan al frontmatter de `SKILL.md` compatible con `skills-ref` y a rutas relativas de scripts independientes de la ubicacion de instalacion en la documentacion.
 
-[`ponytail/`](ponytail/) procede de [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail), revisión `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156`, conservando la licencia MIT. Solo se incluye el skill principal independiente; `argument-hint` se mueve a metadata por compatibilidad de formato.
+[`ponytail/`](ponytail/) procede de [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail), revisión `9cc65d03aa2da1db7121b912d03596409ee340b8`, conservando la licencia MIT. Solo se incluye el skill principal independiente, sin cambios.
 
 ## Requisitos Habituales
 

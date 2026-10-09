@@ -101,7 +101,7 @@ Claude Code या Codex की global instructions के लिए [`CLAUDE_AG
 
 [`planning-with-files/`](planning-with-files/) का upstream baseline [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) है। यह repository local skill के लिए उसी upstream directory को canonical baseline मानती है। Local differences सिर्फ `skills-ref`-compatible `SKILL.md` frontmatter और install-location-independent relative script path docs तक सीमित हैं।
 
-[`ponytail/`](ponytail/) को [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) के `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156` से लिया गया है और MIT license रखा गया है। केवल standalone मुख्य skill शामिल है; format compatibility के लिए `argument-hint` को metadata में रखा गया है।
+[`ponytail/`](ponytail/) को [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) के `9cc65d03aa2da1db7121b912d03596409ee340b8` से लिया गया है और MIT license रखा गया है। केवल standalone मुख्य skill बिना बदलाव के शामिल है।
 
 ## सामान्य prerequisites
 

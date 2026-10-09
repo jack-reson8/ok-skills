@@ -101,7 +101,7 @@ git clone https://github.com/mxyhi/ok-skills.git ok-skills
 
 [`planning-with-files/`](planning-with-files/) использует [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) как upstream baseline. В этом репозитории этот upstream-каталог используется как canonical baseline для локального skill. Локальные отличия ограничены совместимым со `skills-ref` frontmatter в `SKILL.md` и не зависящими от места установки относительными путями к scripts в документации.
 
-[`ponytail/`](ponytail/) взят из [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail), коммит `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156`, с сохранением лицензии MIT. Включён только самостоятельный основной навык; `argument-hint` перенесён в metadata для совместимости формата.
+[`ponytail/`](ponytail/) взят из [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail), коммит `9cc65d03aa2da1db7121b912d03596409ee340b8`, с сохранением лицензии MIT. Включён только самостоятельный основной навык, без изменений.
 
 ## Общие предварительные требования
 

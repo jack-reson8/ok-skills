@@ -115,7 +115,7 @@ Then ask naturally:
 
 [`planning-with-files/`](planning-with-files/) tracks [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) as its upstream baseline. This repository keeps that upstream directory as the canonical baseline for the local skill. Local differences are limited to `skills-ref`-compatible `SKILL.md` frontmatter and install-location-independent relative script paths in docs.
 
-[`ponytail/`](ponytail/) tracks [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) at `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156`, retaining its MIT license. This standalone skill moves `argument-hint` into metadata for format compatibility.
+[`ponytail/`](ponytail/) tracks [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) at `9cc65d03aa2da1db7121b912d03596409ee340b8`, retaining its MIT license. Only the standalone main skill is included, unchanged.
 
 [`teamai/`](teamai/) tracks [Tencent/teamai-cli](https://github.com/Tencent/teamai-cli/tree/main/skills/teamai) at `128844fe6c4b2007f5bb4eb59988a13bb78f5f82`, preserving the upstream CLI entry and MIT license; the CLI serves the current workflow with `teamai skill get`. Invoke explicitly with `/teamai`.
 
