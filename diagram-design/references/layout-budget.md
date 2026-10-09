@@ -21,6 +21,7 @@ These are the per-type limits. The universal rows in SKILL.md §7 (9 nodes, 12 a
 
 | Limit | Rule |
 |---|---|
+| Max unique components / relationships / ledger entries (architecture delta) | 8 / 10 / 8 |
 | Max lifelines (sequence) | 5 |
 | Max combined fragments (sequence) | 1 (default); 2 only if each is single-region `opt`/`loop` |
 | Max `alt` regions (sequence) | 2 |
@@ -33,6 +34,8 @@ These are the per-type limits. The universal rows in SKILL.md §7 (9 nodes, 12 a
 | Max org chart depth | 4 |
 | Max org chart nodes | 12 |
 | Max layers (layer stack) | 6 |
+| Max parts / levels / focal parts (exploded axonometric) | 5 / 5 / 1, three detail levels |
+| Max tagged rooms or buildings / boxes / focal (axonometric plan) | 8 / 40 / 1 |
 | Max circles (venn) | 3 |
 | Max layers (pyramid) | 6 |
 | Max radar axes | 5 |
