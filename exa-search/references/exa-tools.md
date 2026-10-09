@@ -3,12 +3,12 @@
 Snapshot checked against:
 
 - Hosted endpoint: `https://mcp.exa.ai/mcp`
-- Official repo: `exa-labs/exa-mcp-server@15ffb50519e719dc791cdc750ce5ed1934c0a1ed`
-- npm package: `exa-mcp-server@3.4.1`
-- npm tarball SHA-256: `62379fab5750cbc8334f096ff986ab1b7152488afffab5b0e275995310b6e978`
-- npm package `gitHead`: `66bacbe4afd35a7e1671be9ab55c2b6bf60aff34`
-- Hosted MCP `serverInfo.version`: `3.2.1` (npm 3.4.1 / official HEAD checked; hosted tool schemas unchanged)
-- Date checked: 2026-09-04
+- Official repo: `exa-labs/exa-mcp-server@e9c3b0126a3373eb1aeaca162e84d0791ff4c7f7`
+- npm package: `exa-mcp-server@3.4.2`
+- npm tarball SHA-256: `a7d76442a45d809393eae6ec439ac4ebbbfa9f89e30789008069f8c5236b3f97`
+- npm package `gitHead`: `f2bdda713e9368a8db8854929faf4fd277e5a1c9`
+- Hosted MCP `serverInfo.version`: `3.4.2` (hosted `web_search_exa` adds required `objective`, not yet in official source or npm)
+- Date checked: 2026-10-09
 
 ## Base URL
 
@@ -24,7 +24,7 @@ Snapshot checked against:
 
 | Tool | Purpose | Parameters |
 | --- | --- | --- |
-| `web_search_exa` | General web search with clean highlights/text | `query` required; `numResults` optional, default `10` |
+| `web_search_exa` | General web search with clean highlights/text | `query` and `objective` required; `numResults` optional, default `10` |
 | `web_fetch_exa` | Fetch full content for known URLs | `urls` required; `maxCharacters` optional, default `3000` |
 
 ## Off By Default
@@ -162,3 +162,10 @@ Rechecked on 2026-09-04:
 - Hosted `initialize` still reports `serverInfo.version=3.2.1`.
 - Anonymous `tools/list` returns all seven explicitly requested tools, including `crawling_exa`, with the same parameters, category `publication`, and deprecated highlight fields.
 - No tool-choice or parameter change was needed.
+
+Rechecked on 2026-10-09:
+- Official repo `main` is `e9c3b0126a3373eb1aeaca162e84d0791ff4c7f7`; npm latest is `exa-mcp-server@3.4.2` with the package metadata above.
+- Hosted `initialize` now reports `serverInfo.version=3.4.2`.
+- Anonymous `tools/list` returns the same seven requested tools. Only `web_search_exa` changed: it adds `objective` (string, 1-4096 chars) and lists it as required. Official source `src/tools/webSearch.ts` and npm 3.4.2 still define only `query` and `numResults`.
+- Anonymous `tools/call web_search_exa` succeeded both with and without `objective`; send it anyway because the hosted schema requires it.
+- Requesting `deep_search_exa` still returns HTTP 401 `Authentication required. Use OAuth or provide an API key.`

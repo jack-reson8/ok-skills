@@ -10,9 +10,10 @@ Use this skill when online search, page fetch, code/docs lookup, company researc
 ## Current Source Of Truth
 
 - Hosted MCP endpoint: `https://mcp.exa.ai/mcp`
-- Official source: `exa-labs/exa-mcp-server@15ffb50519e719dc791cdc750ce5ed1934c0a1ed`
-- Current npm package checked: `exa-mcp-server@3.4.1`; verified tarball SHA-256 `62379fab5750cbc8334f096ff986ab1b7152488afffab5b0e275995310b6e978`
-- Hosted MCP `serverInfo.version` still reports `3.2.1`; tool schemas below are from live `tools/list` on 2026-09-04
+- Official source: `exa-labs/exa-mcp-server@e9c3b0126a3373eb1aeaca162e84d0791ff4c7f7`
+- Current npm package checked: `exa-mcp-server@3.4.2`; verified tarball SHA-256 `a7d76442a45d809393eae6ec439ac4ebbbfa9f89e30789008069f8c5236b3f97`
+- Hosted MCP `serverInfo.version` reports `3.4.2`; tool schemas below are from live `tools/list` on 2026-10-09
+- Hosted schema is ahead of the open-source code: hosted `web_search_exa` requires `objective`, which official source and npm 3.4.2 do not define yet
 - Tool schemas can change. Before adding new parameters, verify with `tools/list` through a normal HTTP client.
 
 Direct MCP HTTP is the required invocation model for this skill. `curl` is fine, but keep the session and SSE parsing in small shell helpers instead of repeating low-level flags at every call site.
@@ -21,7 +22,7 @@ Direct MCP HTTP is the required invocation model for this skill. `curl` is fine,
 
 | Need | Prefer | Notes |
 | --- | --- | --- |
-| General current web search | `web_search_exa` | Simple search. Only `query` and `numResults`. |
+| General current web search | `web_search_exa` | Simple search. `query` and `objective`, optional `numResults`. |
 | Filtered search, dates, domains, categories, summaries, highlights, subpages | `web_search_advanced_exa` | Enable explicitly in `tools=`. Use this for company/people/papers/news filters. |
 | Read known URLs fully | `web_fetch_exa` | Use after search when highlights are insufficient. |
 | Code examples/docs | `web_search_exa` | `get_code_context_exa` still exists but is deprecated. |
@@ -33,11 +34,12 @@ Direct MCP HTTP is the required invocation model for this skill. `curl` is fine,
 ### `web_search_exa`
 
 - `query` required: semantically rich natural-language query. Can include `category:company` or `category:people`.
+- `objective` required on hosted schema (1-4096 chars): the goal of this search turn — which documents should rank first, which to exclude, and which facts or figures to pull.
 - `numResults` optional: default `10`.
 - No `type`, `livecrawl`, `contextMaxCharacters`, or `tokensNum` on current hosted schema.
 
 ```json
-{"query":"latest AI safety research June 2026","numResults":10}
+{"query":"latest AI safety research June 2026","objective":"Rank recent papers and lab posts first; skip news aggregators; pull titles, dates, and key findings.","numResults":10}
 ```
 
 ### `web_search_advanced_exa`
@@ -127,7 +129,7 @@ exa_call() {
 }
 
 exa_init
-exa_call web_search_exa '{"query":"latest AI safety research","numResults":5}'
+exa_call web_search_exa '{"query":"latest AI safety research","objective":"Rank recent papers first; pull titles and dates.","numResults":5}'
 ```
 
 Tool output format differs: `web_search_exa` returns formatted text, `web_search_advanced_exa` returns JSON text, and `web_fetch_exa` returns fetched page text.
