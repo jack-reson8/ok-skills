@@ -71,6 +71,7 @@ Claude Code 或 Codex 的全域指令可以從 [`CLAUDE_AGENTS.md`](CLAUDE_AGENT
 - [ax](ax/SKILL.md)：AI 時代的 curl：抓取、發現頁面結構、提取結構化資料，取代臨時解析腳本。
 - [find-docs](find-docs/SKILL.md)：專注於最新文件查詢的 Context7 CLI 工作流。
 - [exa-search](exa-search/SKILL.md)：使用 Exa 進行網頁、程式碼與公司調研。
+- [reverse-engineer-anything](reverse-engineer-anything/SKILL.md)： 當原始碼無法說明已發布應用程式或二進位檔的行為時，使用 REA 的 CLI/MCP 蒐集證據並比較版本。
 - [get-api-docs](get-api-docs/SKILL.md)：撰寫第三方 API / SDK 程式碼前先抓取當前文件。
 - [find-skills](find-skills/SKILL.md)：當使用者提出能力需求時，先檢查是否已有現成 skill 可用。
 
@@ -124,6 +125,7 @@ Claude Code 或 Codex 的全域指令可以從 [`CLAUDE_AGENTS.md`](CLAUDE_AGENT
 | [diagnosing-bugs](diagnosing-bugs/SKILL.md)                                   | 面向疑難 bug 與效能回歸的嚴格診斷迴圈。                                                                                     | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs)                                |
 | [find-docs](find-docs/SKILL.md)                                     | 使用 Context7 CLI 查詢最新文件、API 參考與程式碼範例。                                                                                         | [upstash/context7](https://github.com/upstash/context7/tree/master/skills/find-docs)                                           |
 | [exa-search](exa-search/SKILL.md)                                   | 使用 Exa 進行網頁、程式碼與公司調研。                                                                                                          | 自製                                                                                                                           |
+| [reverse-engineer-anything](reverse-engineer-anything/SKILL.md) | 當原始碼無法說明已發布應用程式或二進位檔的行為時，使用 REA 的 CLI/MCP 蒐集證據並比較版本。 | [morluto/rea](https://github.com/morluto/rea/tree/main/skill-src/reverse-engineer-anything) |
 | [find-skills](find-skills/SKILL.md)                                 | 當使用者需要特定能力時，協助發現既有技能。                                                                                                     | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)                                       |
 | [get-api-docs](get-api-docs/SKILL.md)                               | 在撰寫第三方 API / SDK 程式碼前先抓取當前文件。                                                                                                | [andrewyng/context-hub](https://github.com/andrewyng/context-hub/tree/main/cli/skills/get-api-docs)                            |
 | [grilling](grilling/SKILL.md)                               | 用於直接 grill 會話 的一次一題訪談循環。                                                                                              | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling)                                |

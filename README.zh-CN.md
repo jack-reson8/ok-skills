@@ -85,6 +85,7 @@ Claude Code 或 Codex 的全局指令可以从 [`CLAUDE_AGENTS.md`](CLAUDE_AGENT
 - [ax](ax/SKILL.md)：AI 时代的 curl：抓取、发现页面结构、提取结构化数据，替代临时解析脚本。
 - [find-docs](find-docs/SKILL.md)：专注于最新文档查询的 Context7 CLI 工作流。
 - [exa-search](exa-search/SKILL.md)：用 Exa 做网页、代码、公司调研。
+- [reverse-engineer-anything](reverse-engineer-anything/SKILL.md)： 当源码无法说明已发布应用或二进制的行为时，使用 REA 的 CLI/MCP 收集证据并比较版本。
 - [get-api-docs](get-api-docs/SKILL.md)：写第三方 API / SDK 代码前先拉当前文档。
 - [find-skills](find-skills/SKILL.md)：当用户提出能力诉求时，先查有没有现成 skill 可用。
 
@@ -142,6 +143,7 @@ TeamAI 的 share 与 wiki 流程（原 `teamai-share-learnings`、`team-wiki-cod
 | [diagnosing-bugs](diagnosing-bugs/SKILL.md)                                   | 面向疑难 bug 与性能回归的严格诊断循环。                                                                                     | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs)                                |
 | [find-docs](find-docs/SKILL.md)                                     | 使用 Context7 CLI 查询最新文档、API 参考和代码示例。                                                                                           | [upstash/context7](https://github.com/upstash/context7/tree/master/skills/find-docs)                                           |
 | [exa-search](exa-search/SKILL.md)                                   | 使用 Exa 做网页、代码和公司调研。                                                                                                              | 自制                                                                                                                           |
+| [reverse-engineer-anything](reverse-engineer-anything/SKILL.md) | 当源码无法说明已发布应用或二进制的行为时，使用 REA 的 CLI/MCP 收集证据并比较版本。 | [morluto/rea](https://github.com/morluto/rea/tree/main/skill-src/reverse-engineer-anything) |
 | [find-skills](find-skills/SKILL.md)                                 | 当用户需要特定能力时，发现已有技能。                                                                                                           | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)                                       |
 | [get-api-docs](get-api-docs/SKILL.md)                               | 在写第三方 API / SDK 代码前先抓当前文档。                                                                                                      | [andrewyng/context-hub](https://github.com/andrewyng/context-hub/tree/main/cli/skills/get-api-docs)                            |
 | [grilling](grilling/SKILL.md)                               | 用于直接 grill 会话 的一次一个问题访谈循环。                                                                                              | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling)                                |

@@ -71,6 +71,7 @@ Claude Code または Codex のグローバル指示は [`CLAUDE_AGENTS.md`](CLA
 - [ax](ax/SKILL.md): AI 時代の curl。URL 取得・ページ構造の発見・構造化データ抽出を、使い捨てパーサなしで行う。
 - [find-docs](find-docs/SKILL.md): 最新 docs lookup に特化した Context7 CLI ワークフロー
 - [exa-search](exa-search/SKILL.md): Exa ツールを使った web、code、company research
+- [reverse-engineer-anything](reverse-engineer-anything/SKILL.md): ソースコードだけでは動作が分からない配布済みアプリやバイナリを調査し、REA の CLI/MCP で根拠を集めてバージョンを比較する。
 - [get-api-docs](get-api-docs/SKILL.md): コーディング前に外部 API / SDK の最新ドキュメントを取得
 - [find-skills](find-skills/SKILL.md): ユーザーが欲しい機能に対して既存 skill を探す
 
@@ -125,6 +126,7 @@ Claude Code または Codex のグローバル指示は [`CLAUDE_AGENTS.md`](CLA
 | [diagnosing-bugs](diagnosing-bugs/SKILL.md)                                   | hard bug と performance regression のための規律ある診断ループ。                                                                                   | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs)                                |
 | [find-docs](find-docs/SKILL.md)                                     | Context7 CLI を使って最新 docs、API reference、コード例を調べる。                                                                                                                            | [upstash/context7](https://github.com/upstash/context7/tree/master/skills/find-docs)                                           |
 | [exa-search](exa-search/SKILL.md)                                   | Exa を使って web、code、company research を行う。                                                                                                                                             | Custom                                                                                                                         |
+| [reverse-engineer-anything](reverse-engineer-anything/SKILL.md) | ソースコードだけでは動作が分からない配布済みアプリやバイナリを調査し、REA の CLI/MCP で根拠を集めてバージョンを比較する。 | [morluto/rea](https://github.com/morluto/rea/tree/main/skill-src/reverse-engineer-anything) |
 | [find-skills](find-skills/SKILL.md)                                 | ユーザーが必要とする specialized capability に対して既存 skill を見つける。                                                                                                                   | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)                                       |
 | [get-api-docs](get-api-docs/SKILL.md)                               | コードを書く前に、外部 API や SDK の最新ドキュメントを取得する。                                                                                                                              | [andrewyng/context-hub](https://github.com/andrewyng/context-hub/tree/main/cli/skills/get-api-docs)                            |
 | [grilling](grilling/SKILL.md)                               | 直接の grill session で使う一問ずつの reusable interview loop。                                                                                              | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling)                                |
