@@ -1,13 +1,11 @@
 ---
 name: deep-research
 description: "Professional deep research report generation — multi-agent collaboration with parallel chapter writing, automatic latest-data targeting, multilingual output, and built-in quality checks."
-license: MIT
-metadata:
-  version: "6.0.0"
-  updated: "2026-08-28"
-  risk: medium
-  author: hoolulu
-  repository: https://github.com/hoolulu/deep-research
+version: 6.0.0
+updated: 2026-08-28
+risk: medium
+author: hoolulu
+repository: https://github.com/hoolulu/deep-research
 ---
 
 
