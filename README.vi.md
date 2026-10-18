@@ -6,7 +6,7 @@
 
 Bộ sưu tập AI coding agent skills và playbook `CLAUDE.md` / `AGENTS.md` được tuyển chọn cho Codex, Claude Code, Cursor, OpenClaw, Trae và các công cụ khác tương thích với `SKILL.md`.
 
-Kho này hiện gồm **19 skill có thể tái sử dụng**, tất cả được duy trì trực tiếp dưới dạng thư mục skill cấp cao nhất trong repo này. Chỉ cần clone vào `~/.agents/skills/ok-skills`; các thư mục bên trong đã khớp với bố cục mà workflow dựa trên `AGENTS.md` mong đợi, và [`CLAUDE_AGENTS.md`](CLAUDE_AGENTS.md) cung cấp agent playbook hướng tới Claude Code.
+Kho này hiện gồm **18 skill có thể tái sử dụng**, tất cả được duy trì trực tiếp dưới dạng thư mục skill cấp cao nhất trong repo này. Chỉ cần clone vào `~/.agents/skills/ok-skills`; các thư mục bên trong đã khớp với bố cục mà workflow dựa trên `AGENTS.md` mong đợi, và [`CLAUDE_AGENTS.md`](CLAUDE_AGENTS.md) cung cấp agent playbook hướng tới Claude Code.
 
 Nếu bạn đang tìm **Codex skills**, **Claude Code skills**, **Cursor skills**, **OpenClaw skills**, các playbook **CLAUDE.md / AGENTS.md** có thể tái dùng, hoặc các ví dụ **SKILL.md** thực dụng, repo này được tổ chức để vừa dễ tìm kiếm vừa có thể dùng ngay.
 
@@ -95,18 +95,16 @@ Sau đó bạn có thể yêu cầu một cách tự nhiên:
 ### Frontend và thiết kế
 
 - [better-icons](better-icons/SKILL.md): tìm kiếm, duyệt và lấy icon SVG từ hơn 200 bộ Iconify qua CLI hoặc MCP.
-- [diagram-design](diagram-design/SKILL.md): sơ đồ HTML/SVG editorial 44 loại, có brand token và vẽ lại draw.io/Mermaid.
 
 ## Gói skill vendored
 
 [`planning-with-files/`](planning-with-files/) dùng [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) làm upstream baseline. Repo này dùng thư mục upstream đó làm baseline canonical cho skill cục bộ. Khac biet cuc bo duy nhat la tai lieu dung duong dan script tuong doi khong phu thuoc vi tri cai dat.
 
-[`ponytail/`](ponytail/) lấy từ [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) tại `9cc65d03aa2da1db7121b912d03596409ee340b8`, giữ nguyên giấy phép MIT. Chỉ bao gồm skill chính độc lập, giữ nguyên không chỉnh sửa.
+[`ponytail/`](ponytail/) lấy từ [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) tại `09c434ab73ca43761c5d8b0c5d341926c2fba710`, giữ nguyên giấy phép MIT. Chỉ bao gồm skill chính độc lập, giữ nguyên không chỉnh sửa.
 
 ## Các điều kiện tiên quyết phổ biến
 
 - Skill `ax` cần CLI `ax` (`curl -fsSL https://ax.yusuke.run/install | sh`).
-- Skill `diagram-design` dùng Python 3 cho trích xuất import và self-check đi kèm.
 - Một số skill giả định rằng `gh` đã được cài đặt và đăng nhập.
 - Các skill thiên về trình duyệt có thể cần môi trường hỗ trợ Chrome/CDP.
 - Các skill tra cứu tài liệu bên thứ ba có thể phụ thuộc vào CLI hoặc công cụ MCP bên ngoài; hãy kiểm tra từng `SKILL.md` để biết chi tiết.
@@ -125,7 +123,6 @@ Cột `Source URL` trỏ tới upstream chính thức khi một skill được v
 | [better-icons](better-icons/SKILL.md)                               | Tìm trong hơn 200 bộ Iconify và lấy icon SVG qua CLI hoặc công cụ MCP.                                                                                                                     | [better-auth/better-icons](https://github.com/better-auth/better-icons/tree/main/skills)                                       |
 | [kimi-webbridge](kimi-webbridge/SKILL.md)                           | Điều khiển trình duyệt thật của người dùng qua daemon cục bộ để điều hướng, điền biểu mẫu, chụp màn hình, đọc trang và dùng phiên đã đăng nhập.                                           | [install.sh](https://cdn.kimi.com/webbridge/install.sh)                                                             |
 | [diagnosing-bugs](diagnosing-bugs/SKILL.md)                                   | Vong lap chan doan co ky luat cho bug kho va regression hieu nang.                                                                                 | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs)                                |
-| [diagram-design](diagram-design/SKILL.md)                             | Sơ đồ HTML/SVG/PNG editorial 44 loại; brand token; vẽ lại nguồn draw.io hoặc Mermaid.                                                                                                | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design/tree/main/skills/diagram-design) |
 | [find-docs](find-docs/SKILL.md)                                     | Dùng Context7 CLI để tra cứu tài liệu mới nhất, tham chiếu API và ví dụ mã.                                                                                                                | [upstash/context7](https://github.com/upstash/context7/tree/master/skills/find-docs)                                           |
 | [exa-search](exa-search/SKILL.md)                                   | Dùng Exa cho nghiên cứu web, code và công ty.                                                                                                                                              | Custom                                                                                                                         |
 | [find-skills](find-skills/SKILL.md)                                 | Khám phá các skill hiện có khi người dùng cần những năng lực chuyên biệt.                                                                                                                  | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)                                       |

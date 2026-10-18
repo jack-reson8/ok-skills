@@ -8,7 +8,7 @@ English | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [�
 
 Curated AI coding agent skills and `CLAUDE.md` / `AGENTS.md` playbooks for Codex, Claude Code, Cursor, OpenClaw, Autohand Code, Trae, and other `SKILL.md`-compatible tools.
 
-This repo currently bundles **19 reusable skills**, all maintained as top-level skill directories in this repo. Clone it into `~/.agents/skills/ok-skills`; the directories inside already match the layout expected by `AGENTS.md`-driven workflows, and [`CLAUDE_AGENTS.md`](CLAUDE_AGENTS.md) provides a Claude Code-oriented agent playbook.
+This repo currently bundles **18 reusable skills**, all maintained as top-level skill directories in this repo. Clone it into `~/.agents/skills/ok-skills`; the directories inside already match the layout expected by `AGENTS.md`-driven workflows, and [`CLAUDE_AGENTS.md`](CLAUDE_AGENTS.md) provides a Claude Code-oriented agent playbook.
 
 If you are looking for **Codex skills**, **Claude Code skills**, **Cursor skills**, **OpenClaw skills**, reusable **CLAUDE.md / AGENTS.md** playbooks, or practical **SKILL.md** examples, this repository is designed to be both searchable and immediately usable.
 
@@ -109,22 +109,20 @@ Then ask naturally:
 ### Frontend & Design
 
 - [better-icons](better-icons/SKILL.md): search, browse, and retrieve SVG icons from 200+ Iconify libraries via CLI or MCP.
-- [diagram-design](diagram-design/SKILL.md): editorial HTML/SVG diagrams across 44 types, with brand tokens and draw.io/Mermaid redraw.
 
 ## Vendored Skill Packs
 
 [`planning-with-files/`](planning-with-files/) tracks [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) as its upstream baseline. This repository keeps that upstream directory as the canonical baseline for the local skill. The only local difference is install-location-independent relative script paths in docs.
 
-[`ponytail/`](ponytail/) tracks [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) at `9cc65d03aa2da1db7121b912d03596409ee340b8`, retaining its MIT license. Only the standalone main skill is included, unchanged.
+[`ponytail/`](ponytail/) tracks [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) at `09c434ab73ca43761c5d8b0c5d341926c2fba710`, retaining its MIT license. Only the standalone main skill is included, unchanged.
 
-[`teamai/`](teamai/) tracks [Tencent/teamai-cli](https://github.com/Tencent/teamai-cli/tree/main/skills/teamai) at `046a1e63b1161147bf80ce51af0cba1c924c443d`, preserving the upstream CLI entry and MIT license; the CLI serves the current workflow with `teamai skill get`. Invoke explicitly with `/teamai`.
+[`teamai/`](teamai/) tracks [Tencent/teamai-cli](https://github.com/Tencent/teamai-cli/tree/main/skills/teamai) at `58706fe251ec73e203a3a2802266f411a513a5d9`, preserving the upstream CLI entry and MIT license; the CLI serves the current workflow with `teamai skill get`. Invoke explicitly with `/teamai`.
 
 TeamAI's share and wiki workflows (formerly the `teamai-share-learnings` and `team-wiki-codebase` companion skills, removed upstream in `ca6e51251f65`) are served by the TeamAI CLI: load them with `teamai skill get share` or `teamai skill get wiki`. TeamAI CLI is required for contribution and codebase commands.
 
 ## Common Prerequisites
 
 - The `ax` skill requires the `ax` CLI (`curl -fsSL https://ax.yusuke.run/install | sh`).
-- The `diagram-design` skill uses Python 3 for import extraction and the packaged self-check.
 - Some skills assume `gh` is installed and authenticated.
 - Browser-focused skills may require a Chrome/CDP-capable environment.
 - Third-party doc lookup skills may depend on external CLIs or MCP tools; check each `SKILL.md` for details.
@@ -143,7 +141,6 @@ TeamAI's share and wiki workflows (formerly the `teamai-share-learnings` and `te
 | [better-icons](better-icons/SKILL.md)                               | Search 200+ Iconify libraries and retrieve SVG icons through CLI or MCP tools.                                                                                                          | [better-auth/better-icons](https://github.com/better-auth/better-icons/tree/main/skills)                                       |
 | [kimi-webbridge](kimi-webbridge/SKILL.md)                           | Control the user's real browser through a local daemon for navigation, forms, screenshots, page reading, and authenticated sessions.                                                   | [install.sh](https://cdn.kimi.com/webbridge/install.sh)                                                             |
 | [diagnosing-bugs](diagnosing-bugs/SKILL.md)                                   | Disciplined diagnosis loop for hard bugs and performance regressions.                                                                                                                     | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs)                                |
-| [diagram-design](diagram-design/SKILL.md)                             | Editorial HTML/SVG/PNG diagrams across 44 types; onboard brand tokens; redraw draw.io or Mermaid sources.                                                                                                | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design/tree/main/skills/diagram-design) |
 | [find-docs](find-docs/SKILL.md)                                     | Use the Context7 CLI for current documentation lookup, API references, and code examples.                                                                                              | [upstash/context7](https://github.com/upstash/context7/tree/master/skills/find-docs)                                           |
 | [exa-search](exa-search/SKILL.md)                                   | Use Exa for web, code, and company research.                                                                                                                                            | Custom                                                                                                                         |
 | [find-skills](find-skills/SKILL.md)                                 | Discover existing skills when users need specialized capabilities.                                                                                                                      | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)                                       |

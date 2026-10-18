@@ -6,7 +6,7 @@
 
 Coleccion curada de skills para agentes de programacion con IA y playbooks de `CLAUDE.md` / `AGENTS.md` para Codex, Claude Code, Cursor, OpenClaw, Trae y otras herramientas compatibles con `SKILL.md`.
 
-Este repositorio incluye actualmente **19 skills reutilizables**, todas mantenidas directamente como directorios de skill de nivel superior en este repo. Clonalo en `~/.agents/skills/ok-skills`; los directorios internos ya siguen la estructura esperada por los flujos basados en `AGENTS.md`, y [`CLAUDE_AGENTS.md`](CLAUDE_AGENTS.md) aporta un agent playbook orientado a Claude Code.
+Este repositorio incluye actualmente **18 skills reutilizables**, todas mantenidas directamente como directorios de skill de nivel superior en este repo. Clonalo en `~/.agents/skills/ok-skills`; los directorios internos ya siguen la estructura esperada por los flujos basados en `AGENTS.md`, y [`CLAUDE_AGENTS.md`](CLAUDE_AGENTS.md) aporta un agent playbook orientado a Claude Code.
 
 Si estas buscando **Codex skills**, **Claude Code skills**, **Cursor skills**, **OpenClaw skills**, playbooks reutilizables de **CLAUDE.md / AGENTS.md** o ejemplos practicos de **SKILL.md**, este repositorio esta organizado para ser facil de encontrar y facil de usar desde el primer clon.
 
@@ -95,18 +95,16 @@ Despues puedes pedirlo de forma natural:
 ### Frontend y Diseno
 
 - [better-icons](better-icons/SKILL.md): busca, explora y obtiene iconos SVG de mas de 200 bibliotecas de Iconify mediante CLI o MCP.
-- [diagram-design](diagram-design/SKILL.md): diagramas editoriales HTML/SVG en 44 tipos, con tokens de marca y redibujado de draw.io/Mermaid.
 
 ## Paquetes De Skills Vendorizados
 
 [`planning-with-files/`](planning-with-files/) usa [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) como baseline upstream. Este repositorio usa ese directorio upstream como baseline canonica para la skill local. La unica diferencia local son las rutas relativas de scripts independientes de la ubicacion de instalacion en la documentacion.
 
-[`ponytail/`](ponytail/) procede de [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail), revisión `9cc65d03aa2da1db7121b912d03596409ee340b8`, conservando la licencia MIT. Solo se incluye el skill principal independiente, sin cambios.
+[`ponytail/`](ponytail/) procede de [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail), revisión `09c434ab73ca43761c5d8b0c5d341926c2fba710`, conservando la licencia MIT. Solo se incluye el skill principal independiente, sin cambios.
 
 ## Requisitos Habituales
 
 - El skill `ax` requiere la CLI `ax` (`curl -fsSL https://ax.yusuke.run/install | sh`).
-- El skill `diagram-design` usa Python 3 para extraer imports y el self-check empaquetado.
 - Algunas skills asumen que `gh` esta instalado y autenticado.
 - Las skills centradas en navegador pueden requerir un entorno compatible con Chrome/CDP.
 - Las skills de consulta de documentacion de terceros pueden depender de CLI externas o herramientas MCP; revisa cada `SKILL.md` para los detalles.
@@ -125,7 +123,6 @@ Despues puedes pedirlo de forma natural:
 | [better-icons](better-icons/SKILL.md)                               | Busca en mas de 200 bibliotecas de Iconify y obtiene iconos SVG mediante CLI o herramientas MCP.                                                                                                                    | [better-auth/better-icons](https://github.com/better-auth/better-icons/tree/main/skills)                                       |
 | [kimi-webbridge](kimi-webbridge/SKILL.md)                           | Controla el navegador real del usuario mediante un daemon local para navegacion, formularios, capturas, lectura de paginas y sesiones autenticadas.                                                                 | [install.sh](https://cdn.kimi.com/webbridge/install.sh)                                                             |
 | [diagnosing-bugs](diagnosing-bugs/SKILL.md)                                   | Bucle disciplinado de diagnostico para bugs dificiles y regresiones de rendimiento.                                                                 | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs)                                |
-| [diagram-design](diagram-design/SKILL.md)                             | Diagramas editoriales HTML/SVG/PNG en 44 tipos; tokens de marca; redibuja fuentes draw.io o Mermaid.                                                                                                | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design/tree/main/skills/diagram-design) |
 | [find-docs](find-docs/SKILL.md)                                     | Usa Context7 CLI para consultar documentacion actual, referencias de API y ejemplos de codigo.                                                                                                                     | [upstash/context7](https://github.com/upstash/context7/tree/master/skills/find-docs)                                           |
 | [exa-search](exa-search/SKILL.md)                                   | Usa Exa para investigacion web, de codigo y de empresas.                                                                                                                                                            | Custom                                                                                                                         |
 | [find-skills](find-skills/SKILL.md)                                 | Descubre skills existentes cuando los usuarios necesitan capacidades especializadas.                                                                                                                                | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)                                       |

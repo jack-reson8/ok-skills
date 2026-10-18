@@ -12,7 +12,7 @@ Use this skill when online search, page fetch, code/docs lookup, company researc
 - Hosted MCP endpoint: `https://mcp.exa.ai/mcp`
 - Official source: `exa-labs/exa-mcp-server@e9c3b0126a3373eb1aeaca162e84d0791ff4c7f7`
 - Current npm package checked: `exa-mcp-server@3.4.2`; verified tarball SHA-256 `a7d76442a45d809393eae6ec439ac4ebbbfa9f89e30789008069f8c5236b3f97`
-- Hosted MCP `serverInfo.version` reports `3.4.2`; tool schemas below are from live `tools/list` on 2026-10-09
+- Hosted MCP `serverInfo.version` reports `3.5.0`; tool schemas below are from live `tools/list` on 2026-10-18. The npm package remains at `3.4.2`.
 - Hosted schema is ahead of the open-source code: hosted `web_search_exa` requires `objective`, which official source and npm 3.4.2 do not define yet
 - Tool schemas can change. Before adding new parameters, verify with `tools/list` through a normal HTTP client.
 
@@ -47,7 +47,7 @@ Direct MCP HTTP is the required invocation model for this skill. `curl` is fine,
 - `query` required.
 - Common optional filters: `numResults`, `type` (`auto` | `fast` | `instant`), `category`, `includeDomains`, `excludeDomains`, `startPublishedDate`, `endPublishedDate`, `startCrawlDate`, `endCrawlDate`, `includeText`, `excludeText`, `userLocation`, `moderation`, `additionalQueries`.
 - Content controls: `textMaxCharacters`, `contextMaxCharacters`, `enableSummary`, `summaryQuery`, `enableHighlights`, `highlightsMaxCharacters`, `highlightsQuery`, `maxAgeHours`, `livecrawlTimeout`, `subpages`, `subpageTarget`.
-- Deprecated highlight controls: `highlightsNumSentences`, `highlightsPerUrl`; prefer `highlightsMaxCharacters`.
+- Deprecated highlight controls: `highlightsNumSentences`, `highlightsPerUrl` (ignored); prefer `highlightsMaxCharacters`.
 - Categories include `company`, `publication`, `news`, `pdf`, `github`, `personal site`, `people`, `financial report`.
 
 ```json
@@ -82,9 +82,9 @@ Direct MCP HTTP is the required invocation model for this skill. `curl` is fine,
 
 ## Curl Pattern
 
-1. POST `initialize`; keep returned `Mcp-Session-Id` response header.
-2. POST `notifications/initialized` with that header.
-3. POST `tools/list` or `tools/call` with that header.
+1. POST `initialize`; keep the `Mcp-Session-Id` response header if one is returned. The hosted service may operate without a session header.
+2. POST `notifications/initialized`, including the session header when present.
+3. POST `tools/list` or `tools/call`, including the session header when present.
 4. If response is `text/event-stream`, parse JSON from `data:` lines.
 
 ### Minimal Curl Helper

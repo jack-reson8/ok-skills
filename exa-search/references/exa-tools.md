@@ -7,8 +7,8 @@ Snapshot checked against:
 - npm package: `exa-mcp-server@3.4.2`
 - npm tarball SHA-256: `a7d76442a45d809393eae6ec439ac4ebbbfa9f89e30789008069f8c5236b3f97`
 - npm package `gitHead`: `f2bdda713e9368a8db8854929faf4fd277e5a1c9`
-- Hosted MCP `serverInfo.version`: `3.4.2` (hosted `web_search_exa` adds required `objective`, not yet in official source or npm)
-- Date checked: 2026-10-09
+- Hosted MCP `serverInfo.version`: `3.5.0` (hosted `web_search_exa` adds required `objective`, not yet in official source or npm)
+- Date checked: 2026-10-18
 
 ## Base URL
 
@@ -16,7 +16,7 @@ Snapshot checked against:
 - Select tools: `?tools=tool_a,tool_b,...`
 - API key: `?exaApiKey=YOUR_EXA_API_KEY`, `Authorization: Bearer ...`, or `EXA_API_KEY` for local npm.
 - Anonymous hosted use works but has rate limits and may not register API-key-only tools.
-- Streamable HTTP flow: `initialize`, `notifications/initialized`, then `tools/list` or `tools/call` with the returned `Mcp-Session-Id`.
+- Streamable HTTP flow: `initialize`, `notifications/initialized`, then `tools/list` or `tools/call`. Include `Mcp-Session-Id` if initialization returned one; the hosted service may operate without it.
 - Hosted responses usually use `text/event-stream`; extract JSON from `data:` lines before parsing.
 - Use `curl` through small shell helpers. Repeating raw header/body plumbing at every call site is noisy.
 
@@ -67,7 +67,7 @@ Optional:
 
 Deprecated/compat details:
 
-- `highlightsNumSentences` and `highlightsPerUrl` are deprecated in official source comments; prefer `highlightsMaxCharacters`.
+- `highlightsNumSentences` and `highlightsPerUrl` are deprecated; the hosted schema explicitly says `highlightsPerUrl` is ignored. Prefer `highlightsMaxCharacters`.
 - `livecrawl` is not a direct exposed parameter on current hosted `web_search_exa`; use advanced freshness controls (`maxAgeHours`, `livecrawlTimeout`) when needed.
 - Old local docs mentioning `tokensNum` for `get_code_context_exa` are obsolete.
 
@@ -169,3 +169,9 @@ Rechecked on 2026-10-09:
 - Anonymous `tools/list` returns the same seven requested tools. Only `web_search_exa` changed: it adds `objective` (string, 1-4096 chars) and lists it as required. Official source `src/tools/webSearch.ts` and npm 3.4.2 still define only `query` and `numResults`.
 - Anonymous `tools/call web_search_exa` succeeded both with and without `objective`; send it anyway because the hosted schema requires it.
 - Requesting `deep_search_exa` still returns HTTP 401 `Authentication required. Use OAuth or provide an API key.`
+
+Rechecked on 2026-10-18:
+- Official repo `main` remains `e9c3b0126a3373eb1aeaca162e84d0791ff4c7f7`; npm latest remains `exa-mcp-server@3.4.2`, with the same `gitHead` and package integrity.
+- Hosted `initialize` reports `serverInfo.version=3.5.0`. It returns no session header; anonymous `notifications/initialized` and `tools/list` succeed without one.
+- All eight explicitly requested tools register, including `linkedin_search_exa`. The parameter names, types, and required fields of the seven previously checked tools are unchanged. Advanced highlight descriptions now mark `highlightsPerUrl` as ignored and remove the old character conversion claim for `highlightsNumSentences`.
+- This check covers initialization and schema discovery; search, fetch, and authenticated research calls were not repeated.

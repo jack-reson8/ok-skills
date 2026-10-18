@@ -6,7 +6,7 @@
 
 Codex、Claude Code、Cursor、OpenClaw、Trae、そのほか `SKILL.md` 互換ツール向けに厳選した AI coding agent skills と `CLAUDE.md` / `AGENTS.md` プレイブックをまとめたリポジトリです。
 
-このリポジトリには現在 **19 個の再利用可能な skills** が含まれ、すべてトップレベルの skill ディレクトリとしてこのリポジトリで直接管理されています。`~/.agents/skills/ok-skills` に clone すれば、内部ディレクトリは `AGENTS.md` ベースの workflow が期待する layout にすでに合っており、[`CLAUDE_AGENTS.md`](CLAUDE_AGENTS.md) は Claude Code 向けの agent playbook を提供します。
+このリポジトリには現在 **18 個の再利用可能な skills** が含まれ、すべてトップレベルの skill ディレクトリとしてこのリポジトリで直接管理されています。`~/.agents/skills/ok-skills` に clone すれば、内部ディレクトリは `AGENTS.md` ベースの workflow が期待する layout にすでに合っており、[`CLAUDE_AGENTS.md`](CLAUDE_AGENTS.md) は Claude Code 向けの agent playbook を提供します。
 
 **Codex skills**、**Claude Code skills**、**Cursor skills**、**OpenClaw skills**、再利用できる **CLAUDE.md / AGENTS.md** プレイブック、実用的な **SKILL.md** 例を探しているなら、このリポジトリは見つけやすさと導入しやすさを意識して整理しています。
 
@@ -95,18 +95,16 @@ Claude Code または Codex のグローバル指示は [`CLAUDE_AGENTS.md`](CLA
 ### Frontend & Design
 
 - [better-icons](better-icons/SKILL.md): CLI または MCP で 200 以上の Iconify ライブラリを検索し、SVG アイコンを取得する
-- [diagram-design](diagram-design/SKILL.md): 44 種のエディトリアル HTML/SVG 図。ブランド token と draw.io/Mermaid 再描画に対応。
 
 ## Vendored Skill Packs
 
 [`planning-with-files/`](planning-with-files/) は [`OthmanAdi/planning-with-files/.codex/skills/planning-with-files`](https://github.com/OthmanAdi/planning-with-files/tree/master/.codex/skills/planning-with-files) を upstream baseline として対応しています。この repository では、その upstream directory を local skill の canonical baseline として扱います。ローカル差分は、インストール場所に依存しない相対 script path docs のみです。
 
-[`ponytail/`](ponytail/) は [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) の `9cc65d03aa2da1db7121b912d03596409ee340b8` を取り込み、MIT ライセンスを保持しています。独立したメインスキルのみを変更せずに収録しています。
+[`ponytail/`](ponytail/) は [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail/tree/main/skills/ponytail) の `09c434ab73ca43761c5d8b0c5d341926c2fba710` を取り込み、MIT ライセンスを保持しています。独立したメインスキルのみを変更せずに収録しています。
 
 ## よくある前提条件
 
 - `ax` skill は `ax` CLI が必要です（`curl -fsSL https://ax.yusuke.run/install | sh`）。
-- `diagram-design` skill の import 抽出と self-check には Python 3 が必要です。
 - 一部の skills は `gh` がインストール済みかつ認証済みであることを前提にしています。
 - ブラウザ系 skills では、Chrome / CDP を使える実行環境が必要になる場合があります。
 - 外部 docs lookup 系の skills は追加の CLI や MCP tools に依存することがあります。詳細は各 `SKILL.md` を確認してください。
@@ -125,7 +123,6 @@ Claude Code または Codex のグローバル指示は [`CLAUDE_AGENTS.md`](CLA
 | [better-icons](better-icons/SKILL.md)                               | CLI または MCP ツールで 200 以上の Iconify ライブラリを検索し、SVG アイコンを取得する。                                                                                                       | [better-auth/better-icons](https://github.com/better-auth/better-icons/tree/main/skills)                                       |
 | [kimi-webbridge](kimi-webbridge/SKILL.md)                           | ローカルデーモン経由でユーザーの実ブラウザを操作し、ナビゲーション、フォーム入力、スクリーンショット、ページ読解、ログイン済みセッションに対応します。                                      | [install.sh](https://cdn.kimi.com/webbridge/install.sh)                                                             |
 | [diagnosing-bugs](diagnosing-bugs/SKILL.md)                                   | hard bug と performance regression のための規律ある診断ループ。                                                                                   | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs)                                |
-| [diagram-design](diagram-design/SKILL.md)                             | 44 種のエディトリアル HTML/SVG/PNG 図。ブランド token 対応。draw.io / Mermaid を再描画。                                                                                                | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design/tree/main/skills/diagram-design) |
 | [find-docs](find-docs/SKILL.md)                                     | Context7 CLI を使って最新 docs、API reference、コード例を調べる。                                                                                                                            | [upstash/context7](https://github.com/upstash/context7/tree/master/skills/find-docs)                                           |
 | [exa-search](exa-search/SKILL.md)                                   | Exa を使って web、code、company research を行う。                                                                                                                                             | Custom                                                                                                                         |
 | [find-skills](find-skills/SKILL.md)                                 | ユーザーが必要とする specialized capability に対して既存 skill を見つける。                                                                                                                   | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)                                       |
