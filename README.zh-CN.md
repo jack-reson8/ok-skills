@@ -143,6 +143,12 @@ Claude Code 或 Codex 的全局指令可以从 [`CLAUDE_AGENTS.md`](CLAUDE_AGENT
 - Huashu Design 3.0 按产物类型拆分模块，新视觉设计先出六张缩略图，再展开三个完整方向供选择；纯导出和机械修改豁免。
 - Kimi WebBridge 技能 2.0.24 增加已有标签页挂接与 ARIA 快照分页说明。这些能力需要配套的守护进程和浏览器扩展；同步本仓只更新技能文件。
 
+### 上游迁移说明（2026-10-29）
+
+- Planning with Files 3.26.0 新增显式计划格式校验（`check-complete.sh --validate` / `check-complete.ps1 -Validate`）。新计划必须保留原生阶段标题与状态标记；旧计划只报告格式问题，不自动改写。可选设置 `PWF_SKIP_SUBAGENTS=1` 跳过子代理的工具 hook 注入。
+- REA 技能版本 55 新增 AgentEnv 环境包、更多制品与运行时工作流，并区分插件管理和 setup 管理的 MCP 注册恢复方式。以已安装 REA 运行时实际暴露的能力为准；同步技能不会升级运行时。
+- `imagegen-frontend-web` 已迁移至 [`Leonxlnx/imagegen-skills`](https://github.com/Leonxlnx/imagegen-skills/tree/main/skills/imagegen-frontend-web)，技能名称和本仓收录内容不变。
+
 ## 常见前置条件
 
 - 浏览器类技能通常需要可用的 Chrome/CDP 环境。
@@ -172,7 +178,7 @@ Claude Code 或 Codex 的全局指令可以从 [`CLAUDE_AGENTS.md`](CLAUDE_AGENT
 | [reverse-engineer-anything](reverse-engineer-anything/SKILL.md) | 当源码无法说明已发布应用或二进制的行为时，使用 REA 的 CLI/MCP 收集证据并比较版本。 | [morluto/rea](https://github.com/morluto/rea/tree/main/.agents/skills/reverse-engineer-anything) |
 | [find-skills](find-skills/SKILL.md)                                 | 当用户需要特定能力时，发现已有技能。                                                                                                           | [vercel-labs/skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)                                       |
 | [huashu-design](huashu-design/SKILL.md)                           | 用 HTML 创建高保真原型、交互演示、幻灯片、动画、设计变体、视频导出和设计评审。                                                                | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)                                                       |
-| [imagegen-frontend-web](imagegen-frontend-web/SKILL.md) | 为前端页面生成高级设计参考图，每个 section 一张横向图。 | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill/tree/main/skills/imagegen-frontend-web) |
+| [imagegen-frontend-web](imagegen-frontend-web/SKILL.md) | 为前端页面生成高级设计参考图，每个 section 一张横向图。 | [Leonxlnx/imagegen-skills](https://github.com/Leonxlnx/imagegen-skills/tree/main/skills/imagegen-frontend-web) |
 | [pro-motion](pro-motion/SKILL.md) | 音频优先的动态图形发布片、品牌片和宣传片：先规划音乐，再用代码（canvas 转 MP4）渲染并卡点，附动效库和校验脚本。 | [https://github.com/jack-reson8/pro-motion](https://github.com/jack-reson8/pro-motion) |
 | [get-api-docs](get-api-docs/SKILL.md)                               | 在写第三方 API / SDK 代码前先抓当前文档。                                                                                                      | [andrewyng/context-hub](https://github.com/andrewyng/context-hub/tree/main/cli/skills/get-api-docs)                            |
 | [grilling](grilling/SKILL.md)                               | 用于直接 grill 会话的设计树访谈循环。                                                                                              | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling)                                |
